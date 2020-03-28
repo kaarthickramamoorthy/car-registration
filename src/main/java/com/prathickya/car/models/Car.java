@@ -3,8 +3,17 @@ package com.prathickya.car.models;
 import java.math.BigDecimal;
 import java.sql.Date;
 
-public class Car {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+@Entity
+public class Car {
+	
+	@Id
+	@GeneratedValue
+	private long id;
+	
 	private String name;
 	
 	private String email;
@@ -13,13 +22,33 @@ public class Car {
 	
 	private String model;
 	
-	private String serialNumber;
+	private String sno;
 	
-	private BigDecimal purchasePrice;
+	private BigDecimal purprice;;
 	
-	private Date purchaseDate;
+	private Date purdate;
 	
 	private Boolean contact;
+	
+	//Empty constructor is required by JPA
+	public Car () {
+		
+	}
+	
+	public Car(String name, String email, String phone, String model, String sno, BigDecimal purchasePrice,
+			Date purchaseDate, Boolean contact) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+		this.model = model;
+		this.sno = sno;
+		this.purprice = purchasePrice;
+		this.purdate = purchaseDate;
+		this.contact = contact;
+	}
+
+
 
 	public String getName() {
 		return name;
@@ -52,29 +81,19 @@ public class Car {
 	public void setModel(String model) {
 		this.model = model;
 	}
+	
 
-	public String getSerialNumber() {
-		return serialNumber;
+	public long getId() {
+		return id;
 	}
 
-	public void setSerialNumber(String serialNumber) {
-		this.serialNumber = serialNumber;
+
+	public String getSno() {
+		return sno;
 	}
 
-	public BigDecimal getPurchasePrice() {
-		return purchasePrice;
-	}
-
-	public void setPurchasePrice(BigDecimal purchasePrice) {
-		this.purchasePrice = purchasePrice;
-	}
-
-	public Date getPurchaseDate() {
-		return purchaseDate;
-	}
-
-	public void setPurchaseDate(Date purchaseDate) {
-		this.purchaseDate = purchaseDate;
+	public void setSno(String sno) {
+		this.sno = sno;
 	}
 
 	public Boolean getContact() {
@@ -84,5 +103,32 @@ public class Car {
 	public void setContact(Boolean contact) {
 		this.contact = contact;
 	}
+	
+	
+
+	public BigDecimal getPurprice() {
+		return purprice;
+	}
+
+	public void setPurprice(BigDecimal purprice) {
+		this.purprice = purprice;
+	}
+
+	public Date getPurdate() {
+		return purdate;
+	}
+
+	public void setPurdate(Date purdate) {
+		this.purdate = purdate;
+	}
+
+	@Override
+	public String toString() {
+		return "Car [name=" + name + ", email=" + email + ", phone=" + phone + ", model=" + model + ", serialNumber="
+				+ sno + ", purchasePrice=" + purprice + ", purchaseDate=" + purdate + ", contact="
+				+ contact + "]";
+	}
+	
+	
 	
 }

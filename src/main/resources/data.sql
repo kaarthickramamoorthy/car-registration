@@ -1,0 +1,1 @@
+insert into car(id, name, email, phone, model, sno, purprice, purdate, contact) values (1, 'Kaarthick', 'kaarthick.r.1982@gmail.com', '123-456-7890','Tucson','123abc',30000,'2017-08-30',1);

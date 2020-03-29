@@ -10,9 +10,9 @@ import javax.persistence.Id;
 @Entity
 public class Car {
 	
-	@Id
-	@GeneratedValue
-	private long id;
+	//@Id
+	//@GeneratedValue
+	//private long id;
 	
 	private String name;
 	
@@ -22,6 +22,7 @@ public class Car {
 	
 	private String model;
 	
+	@Id
 	private String sno;
 	
 	private BigDecimal purprice;;
@@ -83,10 +84,9 @@ public class Car {
 	}
 	
 
-	public long getId() {
-		return id;
-	}
-
+	/*
+	 * public long getId() { return id; }
+	 */
 
 	public String getSno() {
 		return sno;

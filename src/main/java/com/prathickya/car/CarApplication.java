@@ -24,7 +24,7 @@ public class CarApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Car car = rep.findById(1);
+		Car car = rep.findCarBySno("123abc");
 		logger.info("Car with id 1 -->  {} ", car);
 	}
 

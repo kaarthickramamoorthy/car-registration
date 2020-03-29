@@ -1,14 +1,15 @@
 package com.prathickya.car.repository;
 
 import javax.persistence.EntityManager;
-import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.prathickya.car.models.Car;
 
 @Repository
+@Transactional
 public class CarRepository {
 	
 	@Autowired
@@ -18,7 +19,6 @@ public class CarRepository {
 		return em.find(Car.class, sno);
 	}
 	
-	@Transactional
 	public Boolean deleteCarBySno(String sno) {
 		boolean isCarFound = Boolean.FALSE;
 		

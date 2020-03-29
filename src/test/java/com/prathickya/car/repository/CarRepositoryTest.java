@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.DirtiesContext;
 
 import com.prathickya.car.models.Car;
 
@@ -26,6 +27,7 @@ class CarRepositoryTest {
 	}
 	
 	@Test
+	@DirtiesContext  //Spring would reset the data back to the original state after completing this test
 	void deleteCarBySno() {
 		logger.info("Inside deleteCarBySno");
 		Boolean deleteCarBySno = carRepo.deleteCarBySno("123abc");

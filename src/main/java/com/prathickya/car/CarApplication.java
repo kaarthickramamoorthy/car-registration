@@ -23,7 +23,7 @@ public class CarApplication implements CommandLineRunner {
 	}
 
 	@Override
-	public void run(String... args) throws Exception {
+	public void run(String... args) throws Exception {  //This method would be called after the application is started
 		Car car = rep.findCarBySno("123abc");
 		logger.info("Car with id 1 -->  {} ", car);
 	}

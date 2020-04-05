@@ -1,1 +1,3 @@
 insert into car(name, email, phone, model, sno, purprice, purdate, contact) values ('Kaarthick', 'kaarthick.r.1982@gmail.com', '123-456-7890','Tucson','123abc',30000,'2017-08-30',1);
+insert into car(name, email, phone, model, sno, purprice, purdate, contact) values ('Abhaya', 'sweetabhi28@gmail.com', '123-456-0987','BMW','xyz123',50000,'2019-09-30',0);
+insert into car(name, email, phone, model, sno, purprice, purdate, contact) values ('Pratiti', 'pk@gmail.com', '123-456-0887','BENZ','bnz123',100000,'2020-01-01',0);
